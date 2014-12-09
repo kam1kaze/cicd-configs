@@ -1,0 +1,22 @@
+name: simple
+#deployment_mode: [ "ha_compact" , "multinode" ]
+deployment_mode: "multinode"
+
+# settings:
+#   net_provider: [ "nova_network", "neutron"]
+settings:
+    net_provider: "nova_network"
+
+# release:
+#   1 - Icehouse on CentOS 6.5 (2014.1.1-5.1)
+#   2 - Icehouse on Ubuntu 12.04.4 (2014.1.1-5.1)
+release: 2
+nodes:
+    node1:
+      roles:
+        - "controller"
+    node2:
+      roles:
+        - "compute"
+
+timeout: 3600
