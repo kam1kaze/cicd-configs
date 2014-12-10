@@ -4,7 +4,7 @@
 #   - for minimal non-HA installation, specify 2 (1 controller + 1 compute)
 #   - for minimal non-HA with Cinder installation, specify 3 (1 ctrl + 1 compute + 1 cinder)
 #   - for minimal HA installation, specify 4 (3 controllers + 1 compute)
-cluster_size=2
+cluster_size=3
 
 # Every Fuel Web machine name will start from this prefix
 env_name_prefix=fw-jenkins-
@@ -55,7 +55,7 @@ vm_slave_cpu_cores=2
 # Keep in mind that PXE boot might not work correctly with values lower than 768.
 # You can specify memory size for the specific slaves, other will get default vm_slave_memory_default
 vm_slave_memory_default=768
-vm_slave_memory_mb[1]=1024   # for controller node 768 MB should be sufficient
+vm_slave_memory_mb[1]=1280   # for controller node 768 MB should be sufficient
 vm_slave_memory_mb[2]=1280  # for compute node 1GB is recommended, otherwise VM instances in OpenStack may not boot
 vm_slave_memory_mb[3]=768   # for a dedicated Cinder node 768 MB should be sufficient
 
