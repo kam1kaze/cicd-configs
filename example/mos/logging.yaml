@@ -17,12 +17,12 @@ handlers:
         filename: songinfo.log
 
 loggers:
-    clogger:
-        level: DEBUG
-        handlers: [console]
-    #flogger:
-    #    level: WARNING
-    #    handlers: [file]
+    #clogger:
+    #    level: DEBUG
+    #    handlers: [console]
+    flogger:
+        level: WARNING
+        handlers: [file]
 
 root:
     level: DEBUG
