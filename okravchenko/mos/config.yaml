@@ -1,0 +1,16 @@
+tests:
+    clusters_directory: clusters
+    tests:
+        test_simple:
+            cluster: simple
+            suits:
+              - sanity
+              - smoke
+
+deploy_timeout: 3600
+discovery_timeout: 600
+
+# Data saved from Fuel GUI
+gui_config_file: gui.yaml
+# Logs settings
+log_settings: logging.yaml
